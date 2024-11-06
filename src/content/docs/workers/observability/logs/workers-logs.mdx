@@ -82,6 +82,13 @@ Each Workers invocation returns a single invocation log that contains details su
 
 In the Workers Logs UI, logs are presented with a localized timestamp and a message. The message is dependent on the invocation handler. For example, Fetch requests will have a message describing the request method and the request URL, while cron events will be listed as cron. Below is a list of invocation handlers along with their invocation message.
 
+Invocation logs can be disabled in wrangler by setting the `invocation_logs = false` configuration.
+
+```toml
+[observability.logs]
+invocation_logs = false
+```
+
 | Invocation Handler                                              | Invocation Message         |
 | --------------------------------------------------------------- | -------------------------- |
 | [Alarm](/durable-objects/api/alarms/)                           | \<Scheduled Time\>         |
